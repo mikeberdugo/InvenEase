@@ -1,0 +1,176 @@
+{% extends 'base/base.html' %}
+{% load crispy_forms_tags %} 
+
+{% block title %}
+    Nomiweb.co - Portal Empresas - Lista Activos
+{% endblock %}
+
+
+
+
+{% block css %}
+    .card-text {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 3; /* Número de líneas a mostrar */
+        -webkit-box-orient: vertical;
+        height: calc(1.5em * 3); /* Altura según el número de líneas y el tamaño de la fuente */
+    }
+{% endblock %}
+
+
+
+
+{% block sub_titulo1 %} 
+    empleados
+{% endblock %}
+
+
+{% block sub_titulo2 %} 
+Lista Activos
+{% endblock %}
+
+
+{% block titulo2 %} 
+Listado de Contratos Activos
+{% endblock %}
+
+{% block actions %}
+<!-- Button trigger modal -->
+    <button type="button"  class="btn btn-light-primary"  data-bs-toggle="modal" data-bs-target="#kt_modal_lista" >
+        New Board
+    </button>  
+{% endblock %}
+
+
+{% block content %}
+    <div class="container mt-5" >
+        <div class="row">
+            {% for board in boards %}
+                <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
+                    <div class="card">
+                        <div class="card-header ribbon ribbon-end ribbon-clip">
+                            <div class="card-title">{{ board.name }}</div>
+                            <div class="ribbon-label">
+                                {% if board.is_active %}
+                                    Activo
+                                    <span class="ribbon-inner bg-success"></span>
+                                {% else %}
+                                    Archivado
+                                    <span class="ribbon-clip bg-info"></span>
+                                {% endif %}
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">{{ board.description }}</p>
+                            <div>
+                                
+                            </div>
+                            
+                            <div class="d-flex justify-content-between align-items-center my-4">
+                                <a href="{% url 'boards:viewboard' slug=board.slug %}" class="btn btn-primary">Get Into</a>
+                            
+                                <!--begin::Actions-->
+                                <div class="d-flex ms-auto">
+                                    <!--begin::Menu-->
+                                    <div class="me-0">
+                                        <button class="btn btn-sm btn-icon btn-bg-light btn-active-color-primary" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">
+                                            <i class="ki-outline ki-wrench fs-2x"></i>
+                                        </button>
+                                        <!--begin::Menu 3-->
+                                        <div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-800 menu-state-bg-light-primary fw-semibold w-200px py-3" data-kt-menu="true">
+                                            <!--begin::Heading-->
+                                            <div class="menu-item px-3">
+                                                <div class="menu-content text-muted pb-2 px-3 fs-7 text-uppercase">Panel de Gestión de Usuario</div>
+                                            </div>
+                                            <!--end::Heading-->
+                                            
+                                            <!--begin::Menu item-->
+                                            <div class="menu-item px-3">
+                                                <a href="#" class="menu-link flex-stack px-3">Informar fallo
+                                                    <span class="ms-2" data-bs-toggle="tooltip" title="Si encuentra un fallo en cualquier módulo, por favor, realice un reporte.">
+                                                        <i class="ki-duotone ki-information fs-6">
+                                                            <span class="path1"></span>
+                                                            <span class="path2"></span>
+                                                            <span class="path3"></span>
+                                                        </i>
+                                                    </span>
+                                                </a>
+                                            </div>
+                                            <!--end::Menu item-->
+                                            <!--begin::Menu item-->
+                                            <div class="menu-item px-3">
+                                                <a href="" class="menu-link flex-stack px-3">Cambio de Contraseña
+                                                    <span class="ms-2" data-bs-toggle="tooltip" title="Si encuentra un fallo en cualquier módulo, por favor, realice un reporte.">
+                                                        <i class="ki-duotone ki-information fs-6">
+                                                            <span class="path1"></span>
+                                                            <span class="path2"></span>
+                                                            <span class="path3"></span>
+                                                        </i>
+                                                    </span> 
+                                                </a>
+                                            </div>
+                                            <!--end::Menu item-->
+                                            <!--begin::Menu item-->
+                                            <div class="menu-item px-3">
+                                                <a href="#" class="menu-link flex-stack px-3">Editar Informacion
+                                                    <span class="ms-2" data-bs-toggle="tooltip" title="Si encuentra un fallo en cualquier módulo, por favor, realice un reporte.">
+                                                        <i class="ki-duotone ki-information fs-6">
+                                                            <span class="path1"></span>
+                                                            <span class="path2"></span>
+                                                            <span class="path3"></span>
+                                                        </i>
+                                                    </span>
+                                                </a>
+                                            </div>
+                                            <!--end::Menu item-->
+                                        </div>
+                                        <!--end::Menu 3-->
+                                    </div>
+                                    <!--end::Menu-->
+                                </div>
+                                <!--end::Actions-->
+                            </div>
+                            
+
+
+                            
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+    
+    
+    <!-- Modal -->
+    <div class="modal fade" tabindex="-1" id="kt_modal_lista">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title">Create List</h3>
+    
+                    <!--begin::Close-->
+                    <div class="btn btn-icon btn-sm btn-active-light-primary ms-2" data-bs-dismiss="modal" aria-label="Close">
+                        <i class="ki-duotone ki-cross fs-1"><span class="path1"></span><span class="path2"></span></i>
+                    </div>
+                    <!--end::Close-->
+                </div>
+    
+                <div class="modal-body">
+                    <form id="shoppinglists" method="post" >
+                        
+                    </form>
+                    
+                </div>
+    
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" form="shoppinglists"  class="btn btn-primary">Create</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
