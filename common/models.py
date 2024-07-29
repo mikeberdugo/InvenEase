@@ -98,6 +98,7 @@ class Company(models.Model):
     class Meta:
         verbose_name = "Company"  # Nombre en singular en la administración
         verbose_name_plural = "Companies"  # Nombre en plural en la administración
+        db_table = 'company'
 
 
 
@@ -140,6 +141,9 @@ class Product(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
     # Relación con la empresa a la que pertenece el producto.
     company = models.ForeignKey(Company, on_delete=models.CASCADE, related_name='company_products')  
+    
+    barcode = models.CharField(max_length=50, unique=True, blank=True, null=True) 
+    
     
 
     def __str__(self):

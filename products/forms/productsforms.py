@@ -11,9 +11,9 @@ import random
 
 class CompanyForm(forms.Form):
     name = forms.CharField(
-        label='Nombre de la empresa',
+        #label='Nombre del items',
         max_length=255,
-        widget=forms.TextInput(attrs={'placeholder': 'Nombre de la empresa'}),
+        widget=forms.TextInput(attrs={'placeholder': 'Nombre del items'}),
     )
 
 

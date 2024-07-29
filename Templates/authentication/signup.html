@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Iniciar Sesión</title>
+    <title>Creacion de cuenta</title>
     
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700" />
     <!--end::Fonts-->
@@ -52,15 +52,26 @@
 </head>
 
 <body id="kt_body" class="d-flex flex-center flex-column flex-column-fluid" >
+
+    {% load i18n %}
+    <p>{% trans "Hello" %}</p>
     <div class="container d-flex justify-content-center align-items-center form w-100 fv-plugins-bootstrap5 fv-plugins-framework"> 
             
-        <div class="container d-flex justify-content-center align-items-center vh-100 ">
+        <div class="container d-flex justify-content-center align-items-center">
             
-            <div class="col-md-3  ">
+            <div class="col-md-5  ">
                 <div class="card ">
                     <div class="card-body btn-primary draggable-handle ">
-                        <h2 class="card-title text-center btn-primary ">Creacion de cuenta</h2>
+                        <h2 class="card-title text-center btn-primary ">Creacion de cuenta </h2>
+                        
                         {% crispy form %}
+                    </div>
+                    
+                    <div data-bs-toggle="tooltip" data-bs-placement="bottom"  class="d-flex justify-content-center align-items-center text-success"  
+                        title=" la cuenta debe ser creada por un gerente, administrador o jefe de inventario. En el caso de una microempresa,
+                                puede ser creada por la persona encargada del inventario o de las ventas.
+                            ">
+                        ¿Quién debe crear una cuenta?
                     </div>
                     <div data-bs-toggle="tooltip" data-bs-placement="bottom" title="{{login_f}}" >
                         <a href="{% url 'login:login'%}"  class="d-flex justify-content-center align-items-center text-success" >Iniciar sesión</a>
