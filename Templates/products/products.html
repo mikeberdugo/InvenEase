@@ -1,0 +1,215 @@
+
+{% extends 'base/base.html' %}
+{% load i18n %}
+{% load crispy_forms_tags %} 
+
+{% block title %}
+    Nomiweb.co - Portal Empresas - Lista Activos
+{% endblock %}
+
+
+
+
+{% block css %}
+    .card-text {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 3; /* Número de líneas a mostrar */
+        -webkit-box-orient: vertical;
+        height: calc(1.5em * 3); /* Altura según el número de líneas y el tamaño de la fuente */
+    }
+
+    /* Ocultar asteriscos y estilos adicionales */
+    .asteriskField {
+        color: red !important;
+    }
+{% endblock %}
+
+
+
+
+{% block sub_titulo1 %} 
+    product
+{% endblock %}
+
+{% block sub_titulo2 %} 
+    product list
+{% endblock %}
+
+{% block titulo2 %} 
+    product list
+{% endblock %}
+
+
+{% block actions %}
+
+<button id="kt_drawer_product" class="btn btn-icon btn-info">
+    <i class="fa-solid fa-circle-question fs-2x"></i>
+</button>
+{% comment %} <div style="width: 10px;"></div> {% endcomment %}
+<button type="button" class="btn btn-light-primary" data-bs-toggle="modal" data-bs-target="#kt_modal_products">
+    New Product
+</button>
+
+
+
+
+
+{% endblock %}
+
+
+{% block content %}
+    <div class="container mt-5" >
+        <div class="row">
+            {% if product %}
+                <h4 class="alert-heading">¡ dime a ver !</h4>
+            {% else %}
+                {% comment %} <div class="alert alert-primary" role="alert">
+                    <h4 class="alert-heading">¡Ups!</h4>
+                    <p>Parece que esta lista está tan vacía como un parque en pleno invierno. ¡Está tan desierta que incluso los ecos se aburren de rebotar por aquí!</p>
+                    <hr>
+                    <p class="mb-0">¡Manos a la obra! ¡Llenémosla antes de que los fantasmas del aburrimiento decidan hacer de este lugar su hogar permanente!</p>
+                </div> {% endcomment %}
+                <div class="alert alert-primary" role="alert">
+                    <h4 class="alert-heading">Oops!</h4>
+                    <p>It looks like this list is as empty as a park in the middle of winter. It's so deserted that even the echoes are getting bored bouncing around!</p>
+                    <hr>
+                    <p class="mb-0">Let's get to work! Let's fill it up before the ghosts of boredom decide to make this place their permanent haunt!</p>
+                </div>
+            {% endif %}
+
+
+        </div>
+    </div>
+    
+    
+    <!-- Modal -->
+    <div class="modal fade" tabindex="-1" id="kt_modal_products">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title">Create Product</h3>
+                    {% comment %} <button type="button" class="btn btn-primary" data-bs-stacked-modal="#kt_modal_stacked_2">
+                        New Category 
+                    </button> {% endcomment %}
+                    <!--begin::Close-->
+                    <div class="btn btn-icon btn-sm btn-active-light-primary ms-2" data-bs-dismiss="modal" aria-label="Close">
+                        <i class="ki-duotone ki-cross fs-1"><span class="path1"></span><span class="path2"></span></i>
+                    </div>
+                    <!--end::Close-->
+                </div>
+    
+                <div class="modal-body">
+                    {% crispy form %}
+                </div>
+    
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" form="products-form"  class="btn btn-primary">Create</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal fade" tabindex="-1" id="kt_modal_stacked_2">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title">Create Category</h3>
+                    <!--begin::Close-->
+                    <div class="btn btn-icon btn-sm btn-active-light-primary ms-2" data-bs-dismiss="modal" aria-label="Close">
+                        <i class="ki-duotone ki-cross fs-1"><span class="path1"></span><span class="path2"></span></i>
+                    </div>
+                    <!--end::Close-->
+                </div>
+    
+                <div class="modal-body">
+                    {% crispy form2 %}
+                </div>
+    
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" form="products-form"  class="btn btn-primary">Create</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!--begin::View component-->
+<div  id="kt_drawer_product" class="bg-white" data-kt-drawer="true" data-kt-drawer-activate="true" data-kt-drawer-toggle="#kt_drawer_product" data-kt-drawer-close="#kt_drawer_product_close"  data-kt-drawer-width="{default:'300px', 'md': '500px'}" >
+    <!--begin::Card-->
+    <div class="card rounded-0 w-100">
+        <!--begin::Card header-->
+        <div class="card-header pe-5">
+            <!--begin::Title-->
+            <div class="card-title">
+                <!--begin::User-->
+                <div class="d-flex justify-content-center flex-column me-3">
+                    <a href="" class="fs-4 fw-bold text-gray-900 text-hover-primary me-1 lh-1"> <h2>¿Qué es un pasivo?</h2> </a>
+                </div>
+                <!--end::User-->
+            </div>
+            <!--end::Title-->
+
+             <!--begin::Card toolbar-->
+             <div class="card-toolbar">
+                <!--begin::Close-->
+                <div class="btn btn-sm btn-icon btn-active-light-primary" id="kt_drawer_product_close">
+                    <i class="ki-duotone ki-cross fs-2"><span class="path1"></span><span class="path2"></span></i>                
+                </div>
+                <!--end::Close-->
+            </div>
+            <!--end::Card toolbar-->
+        </div>
+        <!--end::Card header-->
+
+        <!--begin::Card body-->
+        <div class="card-body hover-scroll-overlay-y">
+
+            <div>
+                
+                <p>Un pasivo es cualquier deuda u obligación financiera que tienes que pagar en el futuro. Puede incluir préstamos, tarjetas de crédito, hipotecas, o cualquier otro tipo de deuda. Registrar estos pasivos de manera adecuada te ayuda a tener un control claro de tus obligaciones financieras.</p>
+            
+                <h2>¿Por qué es importante registrar los pasivos?</h2>
+                <p>Registrar tus pasivos tiene varias ventajas significativas:</p>
+                <ul>
+                    <li><strong>Saber cuánto debes:</strong> Al registrar todos tus pasivos en un solo lugar, obtienes una visión clara y completa de todas tus deudas.</li>
+                    <li><strong>Planificar mejor tus pagos:</strong> Con un registro claro, puedes organizarte mejor y planificar cómo y cuándo pagar tus deudas, evitando pagos atrasados y cargos por intereses.</li>
+                    <li><strong>Evitar sorpresas:</strong> Mantener un registro actualizado te ayuda a no olvidar ninguna deuda y te permite estar preparado para cualquier obligación financiera futura.</li>
+                </ul>
+            
+                <h2>Cómo usar este formulario:</h2>
+                <p>Para registrar un nuevo pasivo, por favor sigue estos pasos:</p>
+                <ol>
+                    <li><strong>Nombre de Pasivo:</strong> Ingresa un nombre descriptivo para identificar la deuda, como 'Préstamo del coche' o 'Tarjeta de crédito Banco X'.</li>
+                    <li><strong>Saldo:</strong> Indica el monto actual que debes. Asegúrate de ingresar el valor correcto para tener un registro preciso.</li>
+                    <li><strong>Moneda:</strong> Selecciona la moneda en la que está denominada la deuda, como 'COP' para pesos colombianos.</li>
+                    <li><strong>Tipo de Cuenta:</strong> Elige el tipo de cuenta o deuda que es, por ejemplo, 'Préstamo', 'Tarjeta de crédito', etc.</li>
+                    <li><strong>Estado:</strong> Selecciona el estado actual del pasivo, como 'Adeudo' si la deuda está pendiente o 'Cancelado' si ya ha sido pagada.</li>
+                </ol>
+            
+                <h2>¿Qué hacer después?</h2>
+                <p>Una vez que hayas ingresado toda la información requerida, presiona el botón <strong>'Crear Pasivo'</strong> para guardar los datos en el sistema. Esto permitirá mantener un registro organizado y actualizado de todas tus deudas, ayudándote a gestionar mejor tus finanzas personales.</p>
+                <p>Mantener un control detallado de tus pasivos es esencial para una buena salud financiera. Te permitirá tomar decisiones informadas y gestionar tus recursos de manera efectiva, asegurando que siempre estés al tanto de tus obligaciones y puedas planificar tu futuro financiero con confianza.</p>
+            </div>
+            
+        </div>
+        <!--end::Card body-->
+    </div>
+    <!--end::Card-->
+</div>
+<!--end::View component-->
+
+
+
+
+
+
+{% endblock %}
+
+
+{% block js %} 
+
+{% endblock %}

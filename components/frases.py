@@ -1,6 +1,8 @@
 
 ## login 
 
+## login 
+
 frases_falla_login = [
     "¡Parece que el nombre de usuario o la contraseña están jugando a las escondidas! Revisa y vuelve a intentarlo.",
     "¡Oh no! El nombre de usuario o la contraseña decidieron tomar un día libre. ¡Verifica los datos y vuelve a intentarlo!",
@@ -136,4 +138,120 @@ frases_cancelacion = [
     "¡Oh! Parece que te echa atrás el proceso. Si decides intentarlo de nuevo, estaremos aquí para ayudarte."
 ]
 
+## English phrases
 
+
+login_failure_messages_en = [
+    "Oops! The username or password didn’t match. Check your details and try again.",
+    "Looks like the username or password are playing hide and seek! Double-check and give it another shot.",
+    "Oh no! The username or password decided to take a day off. Verify the details and try again!",
+    "Oops! The username or password are on vacation mode. Make sure you enter the correct information.",
+    "Yikes! The username or password slipped away. Check your details and try again.",
+    "Well, well! The username or password decided to take a nap. Verify the info and give it another try.",
+    "Oh no! It seems the username or password are out partying. Make sure everything is in order and try again.",
+    "What a surprise! The username or password decided to take a break. Verify the info and give it another try.",
+    "Attention! The username or password are up to mischief. Make sure they’re correct and try again.",
+    "Oops! It looks like the username or password got lost. Check the details and try again.",
+    "Oh! The username or password are at a party. Review your credentials and try again.",
+]
+
+account_creation_messages_en = [
+    "Don’t have an account yet? No worries! Creating one is so quick you could do it before your viral video ends.",
+    "Still don’t have an account? No problem! Setting one up is so fast you could finish it before the next episode of your favorite series.",
+    "Still without an account? No worries! Creating one is so quick you could do it before your game loads the next level.",
+    "Don’t have an account yet? No problem! Setting one up is so fast you could do it before your dog stops searching for its toy.",
+    "No account yet? No worries! Creating one is so quick you could do it before your plant grows a new leaf.",
+    "Still without an account? No problem! Setting one up is so fast you could do it before your favorite meme goes out of style.",
+    "Still without an account? No hassle! Creating one is so quick you could do it while your background music changes songs.",
+    "Don’t have an account yet? No worries! Creating one is so fast you could do it before your birthday cake melts.",
+    "Still without an account? No problem! Creating one is so quick you could do it before your cat stops ignoring you.",
+    "Don’t have an account yet? No worries! Creating one is so quick you could do it before your new book reaches the end of the first page.",
+]
+
+password_reset_messages_en = [
+    "We’ll send you an email with instructions to reset your password. It’s so easy you could do it while finishing an interesting article!",
+    "You’ll receive an email with instructions to reset your password. It’s so quick you could do it before your favorite show ends its first episode!",
+    "An email with instructions to reset your password is on the way. It’s so simple you could do it while waiting for your pasta to cook!",
+    "We’ll send you an email with instructions to reset your password. It’s so easy you could do it while deciding what to watch on your streaming platform!",
+    "You’ll soon receive an email with instructions to reset your password. It’s so quick you could do it during a short work break!",
+    "You’ll get an email with instructions to reset your password. It’s so simple you could do it while your coffee cools down!",
+    "An email with instructions to reset your password is on its way. It’s so easy you could do it while waiting for an app to load!",
+    "You’ll receive an email with instructions to reset your password. It’s so quick you could do it while choosing your next song!",
+    "We’ll send you an email with instructions to reset your password. It’s so simple you could do it while your coffee machine works its magic!",
+    "An email with instructions to reset your password will arrive soon. It’s so easy you could do it while browsing your social media!",
+]
+
+welcome_messages_en = [
+    "Hello, adventurer! I hope you enjoy it more than a kid in a candy store.",
+    "Welcome to the club! I hope you have as much fun as a dog at a costume party.",
+    "Greetings! I hope you enjoy it as much as a cat finding a sunny spot on a cloudy day.",
+    "So glad to see you here! I hope you enjoy it more than a child with a LEGO set.",
+    "Hey, welcome! I hope you have as much fun as a bee in a flower garden.",
+    "Hello, new friend! I hope you enjoy it as much as a mouse finding a piece of cheese.",
+    "Hello, explorer! I hope you enjoy it more than a kid with a shovel at the beach.",
+    "Welcome! I hope you have as much fun as a dog with a new ball.",
+    "Hey there! I hope you enjoy it as much as a child discovering a new amusement park.",
+    "Greetings, companion! I hope you enjoy it more than a chef with a winning recipe.",
+    "Hello, new user! I hope you have as much fun as a bird flying free.",
+    "Welcome aboard! I hope you enjoy it more than a fish in a new pond.",
+    "Hey, what’s up! I hope you enjoy it as much as a child with a new toy.",
+    "Hello, friend! I hope you enjoy it more than a cat with a new box.",
+    "Welcome to the party! I hope you have as much fun as a turtle in a calm sea.",
+    "Hello, new member! I hope you enjoy it as much as a child finding hidden candies.",
+    "So good to see you! I hope you enjoy it more than a horse galloping freely in the field.",
+    "Hello! I hope you have as much fun as a magician discovering a new trick.",
+    "Welcome! I hope you enjoy it more than a child in a surprise-filled play corner.",
+    "Hey, what’s up! I hope you enjoy it as much as a cat playing with a ball of yarn.",
+]
+
+password_mismatch_messages_en = [
+    "Oops! The passwords are playing hide and seek. Make sure they match and try again.",
+    "Oops! It seems the passwords are having a disagreement. Check that both match and try again.",
+    "Oh no! The passwords aren’t lining up. Verify that they match and try again.",
+    "What a mix-up! The passwords are not synced. Make sure they’re identical and try again.",
+    "Oh dear! The passwords are being mischievous. Ensure they’re the same and try again.",
+    "Oops! The passwords are at odds. Check that they’re identical and try again.",
+    "Oh! The passwords are having their own party. Ensure they match and try again.",
+    "Oops! The passwords are out of sync. Verify that they’re the same and try again.",
+    "Oh dear! The passwords seem to have different opinions. Make sure they’re identical and try again.",
+    "Oh no! The passwords are having a standoff. Ensure they’re the same and try again.",
+]
+
+username_error_messages_en = [
+    "Oh no! This username is already in use. How about finding another as cool as this one?",
+    "Oops! Someone else already grabbed this username. Try being more original and pick another.",
+    "Oh dear! This username is already taken. It’s like everyone’s competing for the same!",
+    "What a coincidence! Someone else already thought of this username. Try another before all the good ones are gone.",
+    "Oh! This username is already in use. It seems someone else also has good taste. Choose another and move on.",
+    "Oops! This username is already on the list. How about trying something more unique before all the good ones are gone?",
+    "Oh no! This username is already taken. Ready to find a name as epic as this one?",
+    "Oops! Someone else already picked this name. How about being the first to choose another equally cool one?",
+    "Oh dear! This username is already in use. Looks like you need to find one even more amazing!",
+    "Oh! This username is already occupied. Make sure your new name is as memorable as the first one!",
+]
+
+email_error_messages_en = [
+    "Oops! This email is already registered. Maybe try another before all the good ones are taken?",
+    "Oh no! This email is already in use. Seems like someone else likes the same domain.",
+    "What a coincidence! This email is already registered. It’s like everyone’s competing for the same!",
+    "Oh dear! This email has already been taken. How about finding an even more impressive one for your account?",
+    "Oh! This email is already occupied. Don’t worry, there are plenty more to choose from!",
+    "Oops! This email is already in use. Looks like you’re competing with a lot of people for the same one. Try another.",
+    "Oh no! This email is already registered. How about trying another to stand out from the crowd?",
+    "Oh dear! This email has already been taken. Choose another before all the good ones are gone!",
+    "What a surprise! This email is already in use. Don’t worry, there are still many interesting options!",
+    "Oops! This email is already on the list. How about selecting another to make your account unique?",
+]
+
+email_verification_messages_en = [
+    "We’ve sent a verification email to your inbox. Check it out and confirm your email address to complete the process.",
+    "A verification email is on its way to your inbox. Open it and confirm your email address to finalize your registration.",
+    "Check your inbox! We’ve sent a verification email. Click the link inside to confirm your email address.",
+    "Look out for a verification email in your inbox. Follow the instructions to confirm your email and complete your registration.",
+    "We’ve sent a verification email to your inbox. Open it and click the link to confirm your email address.",
+    "Check your email! We’ve sent a verification message. Click the link in the email to confirm your address and complete the process.",
+    "A verification email has been sent to your inbox. Follow the link in the email to confirm your email address.",
+    "Look out for a verification email in your inbox. Open it and confirm your email address to complete the sign-up.",
+    "We’ve sent a verification email your way. Check your inbox and click the link to verify your email address.",
+    "Check your inbox for a verification email. Follow the instructions inside to confirm your email address and finalize the process.",
+]

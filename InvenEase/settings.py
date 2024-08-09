@@ -48,9 +48,11 @@ INSTALLED_APPS = [
     'reports',
     'barcode_scanner',
     'audit_log',
+    
     'common',
     'crispy_forms',
     "crispy_bootstrap5",
+    'django_babel',
 ]
 
 CRISPY_ALLOWED_TEMPLATE_PACKS = 'bootstrap5'
@@ -65,6 +67,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
 ]
 
 ROOT_URLCONF = 'InvenEase.urls'
@@ -94,7 +97,7 @@ WSGI_APPLICATION = 'InvenEase.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'NAME': str(BASE_DIR / 'db.sqlite3'),
     }
 }
 
@@ -122,11 +125,32 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/5.0/topics/i18n/
 
-LANGUAGE_CODE = 'es-co'
-TIME_ZONE = 'America/Bogota'
+# Idioma por defecto
+LANGUAGE_CODE = 'en-us'
+
+# Zona horaria
+TIME_ZONE = 'UTC'
+
+# Activar la traducción
 USE_I18N = True
+
+# Usar zonas horarias locales
 USE_L10N = True
-USE_TZ = True
+
+# Idiomas disponibles
+LANGUAGES = [
+    ('en', ('English')),
+    ('es', ('Spanish')),
+    ('ru', ('Russian')),
+    ('ja', ('Japanese')),
+    ('zh_Hans', ('Chinese')),
+    # Puedes agregar más idiomas aquí
+]
+
+# Rutas para los archivos de traducción
+LOCALE_PATHS = [
+    os.path.join(BASE_DIR, 'locale'),
+]
 
 
 # Static files (CSS, JavaScript, Images)

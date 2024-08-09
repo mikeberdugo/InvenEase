@@ -1,4 +1,6 @@
+
 {% extends 'base/base.html' %}
+{% load i18n %}
 {% load crispy_forms_tags %} 
 
 {% block title %}
@@ -23,24 +25,19 @@
 
 
 {% block sub_titulo1 %} 
-    empleados
+    Home
 {% endblock %}
-
 
 {% block sub_titulo2 %} 
-Lista Activos
+    Dashboard
 {% endblock %}
 
-
 {% block titulo2 %} 
-Listado de Contratos Activos
+    Movement Dashboard
 {% endblock %}
 
 {% block actions %}
-<!-- Button trigger modal -->
-    <button type="button"  class="btn btn-light-primary"  data-bs-toggle="modal" data-bs-target="#kt_modal_lista" >
-        New Board
-    </button>  
+
 {% endblock %}
 
 

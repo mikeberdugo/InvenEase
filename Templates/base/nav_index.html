@@ -15,7 +15,7 @@
                                 <span class="path3"></span>
                             </i>
                         </span>
-                        <span class="menu-title">Inicio</span>
+                        <span class="menu-title">Dashboard</span>
                     </a>
                     <!--end:Menu link-->
                 </div>
@@ -30,7 +30,7 @@
                     <span class="menu-icon">
                         <i class="fa-solid fa-box-open fs-2 "></i>
                     </span>
-                    <span class="menu-title">Productos</span>
+                    <span class="menu-title">Products</span>
                     <span class="menu-arrow"></span>
                 </span>
                 <!--end:Menu link-->
@@ -39,11 +39,11 @@
                     <!--begin:Menu item-->
                     <div class="menu-item">
                         <!--begin:Menu link-->
-                        <a class="menu-link" href="#">
+                        <a class="menu-link" href="{% url 'products:products' %}">
                             <span class="menu-bullet">
                                 <i class="fa-solid fa-list"></i>
                             </span>
-                            <span class="menu-title">Lista de Productos</span>
+                            <span class="menu-title">Product List</span>
                         </a>
                         <!--end:Menu link-->
                     </div>
@@ -60,7 +60,7 @@
                             <span class="menu-bullet">
                                 <i class="fa-solid fa-plus"></i>
                             </span>
-                            <span class="menu-title">Agregar Producto</span>
+                            <span class="menu-title">Add Product</span>
                         </a>
                         <!--end:Menu link-->
                     </div>
@@ -80,7 +80,7 @@
                     <span class="menu-icon">
                         <i class="fa-solid fa-warehouse fs-2"></i>
                     </span>
-                    <span class="menu-title">Inventario</span>
+                    <span class="menu-title">Inventory</span>
                     <span class="menu-arrow"></span>
                 </span>
                 <!--end:Menu link-->
@@ -94,7 +94,7 @@
                             <span class="menu-bullet">
                                 <i class="fa-solid fa-sync"></i>
                             </span>
-                            <span class="menu-title">Actualizar Stock</span>
+                            <span class="menu-title">Update Stock</span>
                         </a>
                         <!--end:Menu link-->
                     </div>
@@ -111,7 +111,7 @@
                             <span class="menu-bullet">
                                 <i class="fa-solid fa-exchange-alt"></i>
                             </span>
-                            <span class="menu-title">Movimientos de Inventario</span>
+                            <span class="menu-title">Inventory Movements</span>
                         </a>
                         <!--end:Menu link-->
                     </div>
@@ -128,7 +128,7 @@
                             <span class="menu-bullet">
                                 <i class="fa-solid fa-check-circle"></i>
                             </span>
-                            <span class="menu-title">Conciliación</span>
+                            <span class="menu-title">Conciliation</span>
                         </a>
                         <!--end:Menu link-->
                     </div>
@@ -150,7 +150,7 @@
                     <span class="menu-icon">
                         <i class="fa-solid fa-shopping-cart fs-2"></i>
                     </span>
-                    <span class="menu-title">Órdenes de Compra</span>
+                    <span class="menu-title">Purchase Orders</span>
                     <span class="menu-arrow"></span>
                 </span>
                 <!--end:Menu link-->
@@ -165,7 +165,7 @@
                             <span class="menu-bullet">
                                 <i class="fa-solid fa-plus-circle"></i>
                             </span>
-                            <span class="menu-title">Nueva Orden</span>
+                            <span class="menu-title">New Order</span>
                         </a>
                         <!--end:Menu link-->
                     </div>
@@ -182,7 +182,7 @@
                             <span class="menu-bullet">
                                 <i class="fa-solid fa-history"></i>
                             </span>
-                            <span class="menu-title">Historial de Órdenes</span>
+                            <span class="menu-title">Order History</span>
                         </a>
                         <!--end:Menu link-->
                     </div>
@@ -205,7 +205,7 @@
                     <span class="menu-icon">
                         <i class="fa-solid fa-truck fs-2"></i>
                     </span>
-                    <span class="menu-title">Proveedores</span>
+                    <span class="menu-title">Suppliers</span>
                     <span class="menu-arrow"></span>
                 </span>
                 <!--end:Menu link-->
@@ -219,7 +219,7 @@
                             <span class="menu-bullet">
                                 <i class="fa-solid fa-address-book"></i>
                             </span>
-                            <span class="menu-title">Lista de Proveedores</span>
+                            <span class="menu-title">Supplier List</span>
                         </a>
                         <!--end:Menu link-->
                     </div>
@@ -236,7 +236,7 @@
                             <span class="menu-bullet">
                                 <i class="fa-solid fa-user-plus"></i>
                             </span>
-                            <span class="menu-title">Agregar Proveedor</span>
+                            <span class="menu-title"> Add Supplier</span>
                         </a>
                         <!--end:Menu link-->
                     </div>
@@ -258,7 +258,7 @@
                     <span class="menu-icon">
                         <i class="fa-solid fa-chart-line fs-2 "></i>
                     </span>
-                    <span class="menu-title">Informes</span>
+                    <span class="menu-title">Reports</span>
                     <span class="menu-arrow"></span>
                 </span>
                 <!--end:Menu link-->
@@ -271,13 +271,49 @@
                             <span class="menu-bullet">
                                 <i class="fa-solid fa-pie-chart"></i>
                             </span>
-                            <span class="menu-title">Estadísticas</span>
+                            <span class="menu-title">Sales Report</span>
                         </a>
                         <!--end:Menu link-->
                     </div>
                     <!--end:Menu item-->
                 </div>
                 <!--end:Menu sub-->
+
+                <!--begin:Menu sub-->
+                <div class="menu-sub menu-sub-accordion">
+                    <!--begin:Menu item-->
+                    <div class="menu-item">
+                        <!--begin:Menu link-->
+                        <a class="menu-link" href="#">
+                            <span class="menu-bullet">
+                                <i class="fa-solid fa-pie-chart"></i>
+                            </span>
+                            <span class="menu-title">Financial Report</span>
+                        </a>
+                        <!--end:Menu link-->
+                    </div>
+                    <!--end:Menu item-->
+                </div>
+                <!--end:Menu sub-->
+
+                <!--begin:Menu sub-->
+                <div class="menu-sub menu-sub-accordion">
+                    <!--begin:Menu item-->
+                    <div class="menu-item">
+                        <!--begin:Menu link-->
+                        <a class="menu-link" href="#">
+                            <span class="menu-bullet">
+                                <i class="fa-solid fa-pie-chart"></i>
+                            </span>
+                            <span class="menu-title">Statistics</span>
+                        </a>
+                        <!--end:Menu link-->
+                    </div>
+                    <!--end:Menu item-->
+                </div>
+                <!--end:Menu sub-->
+
+
             </div>
             <!--begin:Menu item-->
 
@@ -292,7 +328,7 @@
                     <span class="menu-icon">
                         <i class="fa-solid fa-barcode fs-2"></i>
                     </span>
-                    <span class="menu-title">Escáner de Códigos de Barras</span>
+                    <span class="menu-title">Barcode Scanner</span>
                     <span class="menu-arrow"></span>
                 </span>
                 <!--end:Menu link-->
@@ -303,26 +339,9 @@
                         <!--begin:Menu link-->
                         <a class="menu-link" href="#">
                             <span class="menu-bullet">
-                                <i class="fa-solid fa-qrcode"></i>
-                            </span>
-                            <span class="menu-title">Escanear Producto</span>
-                        </a>
-                        <!--end:Menu link-->
-                    </div>
-                    <!--end:Menu item-->
-                </div>
-                <!--end:Menu sub-->
-
-                <!--begin:Menu sub-->
-                <div class="menu-sub menu-sub-accordion">
-                    <!--begin:Menu item-->
-                    <div class="menu-item">
-                        <!--begin:Menu link-->
-                        <a class="menu-link" href="#">
-                            <span class="menu-bullet">
                                 <i class="fa-solid fa-print"></i>
                             </span>
-                            <span class="menu-title">Generar Código de Barras</span>
+                            <span class="menu-title">Generate Barcode</span>
                         </a>
                         <!--end:Menu link-->
                     </div>
@@ -341,7 +360,7 @@
                     <span class="menu-icon">
                         <i class="fa-solid fa-file-alt fs-2 "></i>
                     </span>
-                    <span class="menu-title">Auditoría</span>
+                    <span class="menu-title">Audit</span>
                     <span class="menu-arrow"></span>
                 </span>
                 <!--end:Menu link-->
@@ -354,7 +373,7 @@
                             <span class="menu-bullet">
                                 <i class="fa-solid fa-list-alt"></i>
                             </span>
-                            <span class="menu-title">Registro de Cambios</span>
+                            <span class="menu-title">Change Log</span>
                         </a>
                         <!--end:Menu link-->
                     </div>
@@ -365,7 +384,22 @@
             </div>
             <!--begin:Menu item-->
 
-
+            <!--begin:Menu item-->
+            <div class="menu-item here">
+                <!--begin:Menu link-->
+                <a class="menu-link" href="">
+                    <span class="menu-icon">
+                        <i class="fa-solid fa-cogs fs-2"></i>
+                            <span class="path1"></span>
+                            <span class="path2"></span>
+                            <span class="path3"></span>
+                        </i>
+                    </span>
+                    <span class="menu-title">Settings</span>
+                </a>
+                <!--end:Menu link-->
+            </div>
+            <!--end:Menu item-->
 
 
 

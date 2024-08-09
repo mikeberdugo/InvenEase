@@ -1,0 +1,45 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-08-09 10:52-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+#: .\Templates\authentication\login.html:60
+msgid "English"
+msgstr ""
+
+#: .\Templates\authentication\login.html:61
+msgid "Spanish"
+msgstr ""
+
+#: .\Templates\authentication\login.html:62
+msgid "French"
+msgstr ""
+
+#: .\Templates\authentication\login.html:81
+msgid "welcome"
+msgstr "欢迎"
+
+#: .\Templates\authentication\login.html:82
+msgid "start"
+msgstr "通过输入下面的信息登录"
+
+#: .\Templates\authentication\login.html:86
+msgid "create"
+msgstr "创建账户"
+
+#: .\Templates\authentication\login.html:89
+msgid "restore"
+msgstr "恢复密码"
